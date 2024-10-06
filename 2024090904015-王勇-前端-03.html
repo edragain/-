@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端-03</title>
+    <style>
+        .bbpart/*最大的来存放两个板块*/{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            background-color: aqua;
+        }
+        .block1/*1~3为不同颜色的共享单车种类*/{
+            background-color: green;
+            width: 60px;
+            height: 30px;
+        }
+        .block2{
+            background-color:blue;
+            width: 60px;
+            height: 30px;
+        }
+        .block3{
+            background-color: yellow;
+            width: 60px;
+            height: 30px;
+        }
+        .bigpart { 
+    display: grid; 
+    grid-template-columns: repeat(3, 60px); /*分行分列*/
+    grid-template-rows: repeat(3, 30px); 
+    gap: 30px; 
+    width: 270px; 
+    height: 150px; 
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    border: solid;
+    background-color: aqua;
+}
+        @media (max-width: 600px)/*高度像素小于600的处理*/ {
+    .bigpart {
+        justify-content: space-around;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="bbpart">
+        <div class="bigpart">
+            <div class="block1"></div>
+            <div class="block1"></div>
+            <div class="block1"></div>
+            <div class="block2"></div>
+            <div class="block2"></div>
+            <div class="block2"></div>
+            <div class="block3"></div>
+            <div class="block3"></div>
+            <div class="block3"></div>
+        </div>
+        <div class="bigpart">
+            <div class="block1"></div>
+            <div class="block1"></div>
+            <div class="block1"></div>
+            <div class="block2"></div>
+            <div class="block2"></div>
+            <div class="block2"></div>
+            <div class="block3"></div>
+            <div class="block3"></div>
+            <div class="block3"></div>
+        </div>
+    </div>
+</body>
+</html>
